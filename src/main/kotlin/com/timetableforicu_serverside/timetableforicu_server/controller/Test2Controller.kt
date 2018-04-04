@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 
+/*
+
 @RestController
 @RequestMapping("/test2")
 class Test2Controller @Autowired constructor(private val testService: Test2ServiceImpl){
@@ -24,3 +26,5 @@ class Test2Controller @Autowired constructor(private val testService: Test2Servi
     }
 
 }
+
+ */
