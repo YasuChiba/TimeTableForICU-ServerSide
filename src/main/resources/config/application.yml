@@ -10,3 +10,9 @@ spring:
       username: root
       password: test
       driverClassName: com.mysql.jdbc.Driver
+    no-class-info:
+          url: jdbc:mysql://127.0.0.1:3306/no_class_info?useSSL=false
+          username: root
+          password: test
+          driverClassName: com.mysql.jdbc.Driver
+
