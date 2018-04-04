@@ -18,34 +18,34 @@ import javax.sql.DataSource
 @Configuration
 @EnableJpaRepositories(
         basePackages = arrayOf("com.timetableforicu_serverside.timetableforicu_server.domain.repository.noClassInfo"),
-        entityManagerFactoryRef = "secondaryEntityManager",
-        transactionManagerRef = "secondaryTransactionManager")
+        entityManagerFactoryRef = "noClassInfoEntityManager",
+        transactionManagerRef = "noClassInfoTransactionManager")
 open class NoClassInfoDataSourceConfiguration{
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.no-class-info")
-    open fun secondaryProperties(): DataSourceProperties {
+    open fun noClassInfoProperties(): DataSourceProperties {
         return DataSourceProperties()
     }
 
     @Bean
     @Autowired
-    open fun secondaryDataSource(@Qualifier("secondaryProperties") properties: DataSourceProperties): DataSource {
+    open fun noClassInfoDataSource(@Qualifier("noClassInfoProperties") properties: DataSourceProperties): DataSource {
         return properties.initializeDataSourceBuilder().build()
     }
 
     @Bean
     @Autowired
-    open fun secondaryEntityManager(builder: EntityManagerFactoryBuilder, @Qualifier("secondaryDataSource") dataSource: DataSource): LocalContainerEntityManagerFactoryBean {
+    open fun noClassInfoEntityManager(builder: EntityManagerFactoryBuilder, @Qualifier("noClassInfoDataSource") dataSource: DataSource): LocalContainerEntityManagerFactoryBean {
         return builder.dataSource(dataSource)
                 .packages("com.timetableforicu_serverside.timetableforicu_server.domain.model.noClassInfo")
-                .persistenceUnit("secondary")
+                .persistenceUnit("noClassInfo")
                 .build()
     }
 
     @Bean
     @Autowired
-    open fun secondaryTransactionManager(@Qualifier("secondaryEntityManager") secondaryEntityManager: EntityManagerFactory): JpaTransactionManager {
-        return JpaTransactionManager(secondaryEntityManager)
+    open fun noClassInfoTransactionManager(@Qualifier("noClassInfoEntityManager")  noClassInfoEntityManager: EntityManagerFactory): JpaTransactionManager {
+        return JpaTransactionManager(noClassInfoEntityManager)
     }
 }
