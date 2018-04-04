@@ -14,7 +14,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
 import javax.persistence.EntityManagerFactory
 
 import javax.sql.DataSource
-
+/*
 
 @Configuration
 @EnableJpaRepositories(
@@ -55,3 +55,4 @@ open class BusScheduleDataSourceConfiguration {
     }
 
 }
+        */

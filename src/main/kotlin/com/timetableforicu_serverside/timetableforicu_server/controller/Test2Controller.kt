@@ -1,7 +1,6 @@
 package com.timetableforicu_serverside.timetableforicu_server.controller
 
 import com.timetableforicu_serverside.timetableforicu_server.domain.model.diningHallMenu.Test2Model
-import com.timetableforicu_serverside.timetableforicu_server.domain.service.diningHallMenu.Test2ServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

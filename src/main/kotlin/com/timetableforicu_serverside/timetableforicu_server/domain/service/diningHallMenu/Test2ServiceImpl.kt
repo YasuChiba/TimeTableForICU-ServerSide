@@ -5,7 +5,7 @@ import com.timetableforicu_serverside.timetableforicu_server.domain.repository.d
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
-
+/*
 @Service
 class Test2ServiceImpl @Autowired constructor(private val testRepository: Test2Repository):Test2Service {
 
@@ -21,4 +21,4 @@ class Test2ServiceImpl @Autowired constructor(private val testRepository: Test2R
             return Test2Model(-1, "not found")
         }
     }
-}
+}*/

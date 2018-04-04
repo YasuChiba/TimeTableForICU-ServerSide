@@ -13,7 +13,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
 import javax.persistence.EntityManagerFactory
 import javax.sql.DataSource
 
-
+/*
 @Configuration
 @EnableJpaRepositories(
         basePackages = arrayOf("com.timetableforicu_serverside.timetableforicu_server.domain.repository.diningHallMenu"),
@@ -48,3 +48,4 @@ open class DiningHallMenuDataSourceConfiguration{
         return JpaTransactionManager(secondaryEntityManager)
     }
 }
+        */

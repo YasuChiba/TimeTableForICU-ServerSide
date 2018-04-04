@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 
+/*
 @Service
 class TestServiceImpl @Autowired constructor(private val testRepository: TestRepository): TestService {
 
@@ -22,3 +23,4 @@ class TestServiceImpl @Autowired constructor(private val testRepository: TestRep
         }
     }
 }
+  */
