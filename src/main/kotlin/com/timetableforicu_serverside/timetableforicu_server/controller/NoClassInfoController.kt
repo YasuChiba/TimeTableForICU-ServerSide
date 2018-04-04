@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired
 class NoClassInfoController @Autowired constructor(private val service: NoClassInfoService){
 
     @GetMapping("/byId")
-    fun id(@RequestParam(value="id", defaultValue= "-1") id:Long): NoClassInfoModel {
+    fun id(@RequestParam(value="id", defaultValue= "-1") id:Int): NoClassInfoModel {
         return service.findById(id)
     }
 

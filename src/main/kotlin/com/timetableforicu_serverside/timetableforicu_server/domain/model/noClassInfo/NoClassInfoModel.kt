@@ -9,7 +9,7 @@ class NoClassInfoModel(
         @Id
         @GeneratedValue(strategy= GenerationType.AUTO)
         @Column
-        var id: Long = 0,
+        var id: Int = 0,
 
         @Column
         var no_class_date: Date = Date(),
