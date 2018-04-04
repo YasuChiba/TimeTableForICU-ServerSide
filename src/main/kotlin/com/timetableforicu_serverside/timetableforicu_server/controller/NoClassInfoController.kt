@@ -2,11 +2,10 @@ package com.timetableforicu_serverside.timetableforicu_server.controller
 
 import com.timetableforicu_serverside.timetableforicu_server.domain.model.noClassInfo.NoClassInfoModel
 import com.timetableforicu_serverside.timetableforicu_server.domain.service.noClassInfo.NoClassInfoService
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.format.annotation.DateTimeFormat
+import org.springframework.web.bind.annotation.*
+import java.util.*
 
 
 @RestController
@@ -23,4 +22,13 @@ class NoClassInfoController @Autowired constructor(private val service: NoClassI
         return service.findAll()
     }
 
+    @GetMapping("/today","/date")
+    fun today(): List<NoClassInfoModel>{
+        return service.findByDate(Date())
+    }
+
+    @GetMapping("/date/{date}")
+    fun byDate(@PathVariable("date") @DateTimeFormat(pattern="yyyy-MM-dd") date:Date): List<NoClassInfoModel>{
+        return service.findByDate(date)
+    }
 }

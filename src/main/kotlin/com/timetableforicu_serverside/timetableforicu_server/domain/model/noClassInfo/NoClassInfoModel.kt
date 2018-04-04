@@ -1,5 +1,6 @@
 package com.timetableforicu_serverside.timetableforicu_server.domain.model.noClassInfo
 
+import org.springframework.format.annotation.DateTimeFormat
 import java.util.*
 import javax.persistence.*
 
@@ -11,20 +12,20 @@ class NoClassInfoModel(
         @Column
         var id: Int = 0,
 
-        @Column
-        var no_class_date: Date = Date(),
+        @Column(name="no_class_date")
+        var noClassDate: Date = Date(),
 
-        @Column
-        var no_class_period : String = "",
+        @Column(name="no_class_period")
+        var noCLassPeriod : String = "",
 
-        @Column
-        var course_no : String = "",
+        @Column(name="course_no")
+        var courseNo : String = "",
 
-        @Column
-        var english_course_title : String = "",
+        @Column(name="english_course_title")
+        var eCourseTitle : String = "",
 
-        @Column
-        var japanese_course_title : String = "",
+        @Column(name="japanese_course_title")
+        var jCourseTitle : String = "",
 
         @Column
         var instructor : String = "",

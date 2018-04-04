@@ -11,7 +11,7 @@ class NoClassInfoServiceImpl @Autowired constructor(private val repository: NoCl
 
     override fun findByDate(date: Date): List<NoClassInfoModel> {
 
-
+        return repository.findByNoClassDate(date)
     }
 
     override fun findAll(): List<NoClassInfoModel> {
